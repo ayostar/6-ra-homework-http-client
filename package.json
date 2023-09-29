@@ -1,5 +1,6 @@
 {
   "name": "6-ra-homework-http-client",
+  "homepage": "https://ayostar.github.io/6-ra-homework-http-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nanoid": "^5.0.1",
+    "prop-types": "^15.8.1"
   }
 }
