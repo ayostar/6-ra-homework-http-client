@@ -1,6 +1,6 @@
 import Watches from './components/Watches';
 import CRUD from './components/CRUD';
-// import Chat from './components/Chat';
+import Chat from './components/Chat';
 
 function App() {
   return (
