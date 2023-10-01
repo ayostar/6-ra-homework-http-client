@@ -4,7 +4,10 @@ if (url.hostname === 'localhost') {
   url.port = '7777';
 }
 
-// add server on render
+if (url.hostname === 'ayostar.github.io') {
+  url.hostname = 'six-ra-homework-http-server-chat-star.onrender.com';
+  url.protocol = 'https';
+}
 
 const root = url;
 root.pathname = '';

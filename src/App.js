@@ -51,7 +51,7 @@ function App() {
           </div>
         </div>
 
-        {/* <div className={'main__item task _container'} id={'task3'}>
+        <div className={'main__item task _container'} id={'task3'}>
           <header className={'task__header'}>
             <h3 className={'task__title'}>6.3 Чат*</h3>
             <nav className={'task__menu menu'}>
@@ -67,7 +67,7 @@ function App() {
               <Chat />
             </div>
           </div>
-        </div> */}
+        </div>
       </main>
     </div>
   );
