@@ -1,7 +1,7 @@
 const url = new URL(window.location.href);
 
 if (url.hostname === 'localhost') {
-  // url.port = '7070';
+  url.port = '7777';
 }
 
 // add server on render
