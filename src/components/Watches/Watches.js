@@ -12,7 +12,7 @@ const watchesDefaultValue = [
   },
   {
     id: nanoid(),
-    title: 'Владивосток',
+    title: 'Токио',
     timezone: 10,
   },
   {
@@ -22,14 +22,14 @@ const watchesDefaultValue = [
   },
   {
     id: nanoid(),
-    title: 'Париж',
-    timezone: 1,
-  }
+    title: 'Лондон',
+    timezone: 0,
+  },
 ];
 
 export default class Watches extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = { watches: watchesDefaultValue };
 
     this.handleAdd = this.handleAdd.bind(this);
@@ -38,15 +38,18 @@ export default class Watches extends React.Component {
 
   handleAdd = (item) => {
     item.id = nanoid();
-    this.setState((prevState) => ({ ...prevState, watches: [...prevState.watches, item] }));
-  }
+    this.setState((prevState) => ({
+      ...prevState,
+      watches: [...prevState.watches, item],
+    }));
+  };
 
   handleDelete = (item) => {
     this.setState((prevState) => ({
       ...prevState,
-      watches: prevState.watches.filter((prevItem) => prevItem.id !== item.id)
+      watches: prevState.watches.filter((prevItem) => prevItem.id !== item.id),
     }));
-  }
+  };
 
   render() {
     return (
@@ -54,13 +57,15 @@ export default class Watches extends React.Component {
         <FormWatches handleAdd={this.handleAdd} />
 
         <div className={'watches__items'}>
-          {this.state.watches.map((item) =>
+          {this.state.watches.map((item) => (
             <ItemWatches
               key={item.id}
               item={item}
-              handleDelete={this.handleDelete} />)}
+              handleDelete={this.handleDelete}
+            />
+          ))}
         </div>
       </div>
-    )
+    );
   }
 }
