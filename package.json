@@ -37,6 +37,8 @@
     ]
   },
   "devDependencies": {
+    "@mdi/js": "^7.2.96",
+    "@mdi/react": "^1.6.1",
     "nanoid": "^5.0.1",
     "prop-types": "^15.8.1"
   }
