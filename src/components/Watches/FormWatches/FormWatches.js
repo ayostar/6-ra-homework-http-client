@@ -21,7 +21,7 @@ function FormWatches({ handleAdd }) {
     }
 
     setForm((prevForm) => ({ ...prevForm, [name]: value }));
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,33 +33,45 @@ function FormWatches({ handleAdd }) {
     });
 
     setForm(formEmptyValue);
-  }
+  };
 
   return (
     <form className={'watches__form form-watches'} onSubmit={handleSubmit}>
       <div className={'form-watches__body'}>
         <div className={'form-watches__column form-watches__column-1'}>
           <div className={'form-watches__item item-form-watches'}>
-            <label className={'item-form-watches__title'} htmlFor={'watches-input-title'}>Название</label>
+            <label
+              className={'item-form-watches__title'}
+              htmlFor={'watches-input-title'}
+            >
+              Название
+            </label>
             <input
               className={'item-form-watches__input'}
               id={'watches-input-title'}
               name={'title'}
               value={form.title}
-              onChange={handleChange} />
+              onChange={handleChange}
+            />
           </div>
         </div>
 
         <div className={'form-watches__column form-watches__column-2'}>
           <div className={'form-watches__item item-form-watches'}>
-            <label className={'item-form-watches__title'} htmlFor={'watches-input-timezone'}>Временная зона</label>
+            <label
+              className={'item-form-watches__title'}
+              htmlFor={'watches-input-timezone'}
+            >
+              Временная зона
+            </label>
             <input
               className={'item-form-watches__input'}
               id={'watches-input-timezone'}
               name={'timezone'}
               value={form.timezone}
               onChange={handleChange}
-              placeholder={'Часовой пояс: от -12 до +14'} />
+              placeholder={'Часовой пояс: от -12 до +12'}
+            />
           </div>
         </div>
 
@@ -70,11 +82,11 @@ function FormWatches({ handleAdd }) {
         </div>
       </div>
     </form>
-  )
+  );
 }
 
 FormWatches.propTypes = {
   handleAdd: PropTypes.func.isRequired,
-}
+};
 
 export default FormWatches;
